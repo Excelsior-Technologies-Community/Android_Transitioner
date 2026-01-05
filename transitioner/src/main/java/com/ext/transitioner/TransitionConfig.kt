@@ -1,4 +1,6 @@
 package com.ext.transitioner
 
-class TransitionConfig {
-}
+data class TransitionConfig(
+    val duration: Long = 300,
+    val startDelay: Long = 0
+)
