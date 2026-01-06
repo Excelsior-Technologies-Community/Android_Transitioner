@@ -1,5 +1,6 @@
 package com.ext.android_transitioner
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -7,8 +8,10 @@ import androidx.core.view.ViewCompat
 import com.ext.transitioner.utils.transition
 import androidx.core.view.WindowInsetsCompat
 import com.ext.android_transitioner.databinding.ActivityMainBinding
+import com.ext.transitioner.ActivityTransition
 import com.ext.transitioner.TransitionConfig
 import com.ext.transitioner.TransitionType
+import com.ext.transitioner.Transitioner
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -34,6 +37,14 @@ class MainActivity : AppCompatActivity() {
 
         binding.scaleBtn.setOnClickListener {
             binding.titleText.transition(TransitionType.SCALE)
+        }
+
+        binding.newact.setOnClickListener {
+            Transitioner.startActivity(
+                from = this,
+                intent = Intent(this, SecondActivity::class.java),
+                transition = ActivityTransition.SLIDE_RIGHT
+            )
         }
     }
 }

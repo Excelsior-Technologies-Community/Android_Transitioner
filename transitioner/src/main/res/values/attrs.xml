@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TransitionerView">
+
+        <!-- Type of transition -->
+        <attr name="transitionType" format="enum">
+            <enum name="fade" value="0"/>
+            <enum name="slide" value="1"/>
+            <enum name="scale" value="2"/>
+        </attr>
+
+        <!-- Animation duration -->
+        <attr name="transitionDuration" format="integer"/>
+
+        <!-- Delay before animation -->
+        <attr name="transitionDelay" format="integer"/>
+
+        <!-- Auto start when view is attached -->
+        <attr name="transitionAutoStart" format="boolean"/>
+
+    </declare-styleable>
+
+</resources>

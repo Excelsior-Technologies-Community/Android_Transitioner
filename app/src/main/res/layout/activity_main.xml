@@ -11,6 +11,7 @@
         android:id="@+id/titleText"
         android:text="Hello Transitioner 👋"
         android:textSize="24sp"
+        android:textColor="@color/black"
         android:layout_marginBottom="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
@@ -30,6 +31,12 @@
     <Button
         android:id="@+id/scaleBtn"
         android:text="Scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/newact"
+        android:text="Next Activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
